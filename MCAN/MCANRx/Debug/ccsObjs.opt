@@ -1,0 +1,13 @@
+"./mcan_message_rx.o"
+"./ti_msp_dl_config.o"
+"./startup_mspm0g350x_ticlang.o"
+"../mcan_message_rx_LP_MSPM0G3507_nortos_ticlang/Debug/mcan_message_rx.o"
+"../mcan_message_rx_LP_MSPM0G3507_nortos_ticlang/Debug/startup_mspm0g350x_ticlang.o"
+"./mcan_message_rx_LP_MSPM0G3507_nortos_ticlang/Debug/ti_msp_dl_config.o"
+"../mcan_message_rx_LP_MSPM0G3507_nortos_ticlang/Debug/ti_msp_dl_config.o"
+"./mcan_message_rx_LP_MSPM0G3507_nortos_ticlang/mcan_message_rx.o"
+"./mcan_message_rx_LP_MSPM0G3507_nortos_ticlang/startup_mspm0g350x_ticlang.o"
+"../mcan_message_rx_LP_MSPM0G3507_nortos_ticlang/Debug/device_linker.cmd"
+-l"./device_linker.cmd"
+-ldevice.cmd.genlibs
+-llibc.a

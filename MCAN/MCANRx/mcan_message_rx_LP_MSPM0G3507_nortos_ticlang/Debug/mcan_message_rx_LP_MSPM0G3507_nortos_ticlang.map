@@ -1,0 +1,387 @@
+******************************************************************************
+            TI ARM Clang Linker PC v3.2.2                      
+******************************************************************************
+>> Linked Sat Oct 19 14:18:47 2024
+
+OUTPUT FILE NAME:   <mcan_message_rx_LP_MSPM0G3507_nortos_ticlang.out>
+ENTRY POINT SYMBOL: "_c_int00_noargs"  address: 000012fd
+
+
+MEMORY CONFIGURATION
+
+         name            origin    length      used     unused   attr    fill
+----------------------  --------  ---------  --------  --------  ----  --------
+  FLASH                 00000000   00020000  00001680  0001e980  R  X
+  SRAM                  20200000   00008000  00000205  00007dfb  RW X
+  BCR_CONFIG            41c00000   00000080  00000000  00000080  R   
+  BSL_CONFIG            41c00100   00000080  00000000  00000080  R   
+
+
+SEGMENT ALLOCATION MAP
+
+run origin  load origin   length   init length attrs members
+----------  ----------- ---------- ----------- ----- -------
+00000000    00000000    00001680   00001680    r-x
+  00000000    00000000    000000c0   000000c0    r-- .intvecs
+  000000c0    000000c0    00001450   00001450    r-x .text
+  00001510    00001510    00000158   00000158    r-- .rodata
+  00001668    00001668    00000018   00000018    r-- .cinit
+20200000    20200000    00000005   00000000    rw-
+  20200000    20200000    00000005   00000000    rw- .bss
+20207e00    20207e00    00000200   00000000    rw-
+  20207e00    20207e00    00000200   00000000    rw- .stack
+
+
+SECTION ALLOCATION MAP
+
+ output                                  attributes/
+section   page    origin      length       input sections
+--------  ----  ----------  ----------   ----------------
+.intvecs   0    00000000    000000c0     
+                  00000000    000000c0     startup_mspm0g350x_ticlang.o (.intvecs)
+
+.text      0    000000c0    00001450     
+                  000000c0    000002a8     driverlib.a : dl_mcan.o (.text.DL_MCAN_msgRAMConfig)
+                  00000368    00000184                 : dl_mcan.o (.text.DL_MCAN_init)
+                  000004ec    0000017e                 : dl_mcan.o (.text.DL_MCAN_readMsg)
+                  0000066a    00000002     startup_mspm0g350x_ticlang.o (.text.Default_Handler)
+                  0000066c    00000144     driverlib.a : dl_mcan.o (.text.DL_MCAN_setBitTime)
+                  000007b0    00000130                 : dl_mcan.o (.text.DL_MCAN_readMsgRam)
+                  000008e0    0000012c                 : dl_mcan.o (.text.DL_MCAN_config)
+                  00000a0c    0000011c     ti_msp_dl_config.o (.text.SYSCFG_DL_MCAN0_init)
+                  00000b28    0000010c     mcan_message_rx.o (.text.main)
+                  00000c34    000000c4     driverlib.a : dl_mcan.o (.text.DL_MCAN_getRxFIFOStatus)
+                  00000cf8    000000b8                 : dl_mcan.o (.text.DL_MCAN_writeRxFIFOAck)
+                  00000db0    00000094                 : dl_mcan.o (.text.DL_MCAN_getRevisionId)
+                  00000e44    00000074                 : dl_mcan.o (.text.DL_MCAN_addStdMsgIDFilter)
+                  00000eb8    00000068                 : dl_mcan.o (.text.DL_MCAN_enableIntr)
+                  00000f20    00000064                 : dl_mcan.o (.text.DL_MCAN_selectIntrLine)
+                  00000f84    00000064                 : dl_sysctl_mspm0g1x0x_g3x0x.o (.text.DL_SYSCTL_setHFCLKSourceHFXTParams)
+                  00000fe8    00000058                 : dl_mcan.o (.text.DL_MCAN_enableIntrLine)
+                  00001040    0000004c                 : dl_mcan.o (.text.DL_MCAN_setExtIDAndMask)
+                  0000108c    00000040     mcan_message_rx.o (.text.CANFD0_IRQHandler)
+                  000010cc    00000040     driverlib.a : dl_mcan.o (.text.DL_MCAN_isMemInitDone)
+                  0000110c    0000003c     libc.a : autoinit.c.obj (.text:__TI_auto_init_nobinit_nopinit)
+                  00001148    00000038     ti_msp_dl_config.o (.text.SYSCFG_DL_GPIO_init)
+                  00001180    00000038     ti_msp_dl_config.o (.text.SYSCFG_DL_SYSCTL_init)
+                  000011b8    00000034     driverlib.a : dl_mcan.o (.text.DL_MCAN_clearIntrStatus)
+                  000011ec    00000034     ti_msp_dl_config.o (.text.SYSCFG_DL_initPower)
+                  00001220    00000032     driverlib.a : dl_mcan.o (.text.HW_WR_FIELD32_RAW)
+                  00001252    00000002     --HOLE-- [fill = 0]
+                  00001254    0000002c                 : dl_mcan.o (.text.DL_MCAN_getDataSize)
+                  00001280    0000002c                 : dl_mcan.o (.text.DL_MCAN_setClockConfig)
+                  000012ac    00000028                 : dl_mcan.o (.text.DL_Common_updateReg)
+                  000012d4    00000028                 : dl_sysctl_mspm0g1x0x_g3x0x.o (.text.DL_Common_updateReg)
+                  000012fc    00000028     libc.a : boot_cortex_m.c.obj (.text:_c_int00_noargs)
+                  00001324    00000024     driverlib.a : dl_mcan.o (.text.DL_MCAN_getMsgObjSize)
+                  00001348    00000024     ti_msp_dl_config.o (.text.SYSCFG_DL_SYSCTL_CLK_init)
+                  0000136c    00000020     driverlib.a : dl_mcan.o (.text.DL_MCAN_setOpMode)
+                  0000138c    00000020                 : dl_mcan.o (.text.DL_MCAN_writeProtectedRegAccessLock)
+                  000013ac    00000020                 : dl_mcan.o (.text.DL_MCAN_writeProtectedRegAccessUnlock)
+                  000013cc    00000020                 : dl_sysctl_mspm0g1x0x_g3x0x.o (.text.DL_SYSCTL_setHFXTFrequencyRange)
+                  000013ec    00000020                 : dl_mcan.o (.text.HW_RD_FIELD32_RAW)
+                  0000140c    0000001c                 : dl_mcan.o (.text.DL_MCAN_getOpMode)
+                  00001428    00000018                 : dl_mcan.o (.text.DL_MCAN_getIntrStatus)
+                  00001440    00000018                 : dl_sysctl_mspm0g1x0x_g3x0x.o (.text.DL_SYSCTL_setHFXTStartupTime)
+                  00001458    00000018     ti_msp_dl_config.o (.text.SYSCFG_DL_init)
+                  00001470    00000016     libc.a : copy_zero_init.c.obj (.text:decompress:ZI:__TI_zero_init_nomemset)
+                  00001486    00000014     driverlib.a : dl_common.o (.text.DL_Common_delayCycles)
+                  0000149a    00000002     --HOLE-- [fill = 0]
+                  0000149c    00000014                 : dl_sysctl_mspm0g1x0x_g3x0x.o (.text.DL_SYSCTL_disableHFCLKStartupMonitor)
+                  000014b0    00000014                 : dl_sysctl_mspm0g1x0x_g3x0x.o (.text.DL_SYSCTL_enableHFCLKStartupMonitor)
+                  000014c4    00000010                 : dl_sysctl_mspm0g1x0x_g3x0x.o (.text.DL_SYSCTL_disableHFXT)
+                  000014d4    00000010                 : dl_mcan.o (.text.HW_RD_REG32_RAW)
+                  000014e4    00000010                 : dl_mcan.o (.text.HW_WR_REG32_RAW)
+                  000014f4    0000000c                 : dl_sysctl_mspm0g1x0x_g3x0x.o (.text.DL_SYSCTL_getClockStatus)
+                  00001500    00000004     startup_mspm0g350x_ticlang.o (.text.Reset_Handler)
+                  00001504    00000004     libc.a : pre_init.c.obj (.text._system_pre_init)
+                  00001508    00000004            : exit.c.obj (.text:abort)
+                  0000150c    00000004     --HOLE-- [fill = 0]
+
+.cinit     0    00001668    00000018     
+                  00001668    00000008     (.cinit..bss.load) [load image, compression = zero_init]
+                  00001670    00000004     (__TI_handler_table)
+                  00001674    00000008     (__TI_cinit_table)
+                  0000167c    00000004     --HOLE-- [fill = 0]
+
+.rodata    0    00001510    00000158     
+                  00001510    00000060     ti_msp_dl_config.o (.rodata.gMCAN0MsgRAMConfigParams)
+                  00001570    00000040     driverlib.a : dl_mcan.o (.rodata..L__const.DL_MCAN_getDataSize.dataSize)
+                  000015b0    00000034     ti_msp_dl_config.o (.rodata.gMCAN0InitParams)
+                  000015e4    0000002c     ti_msp_dl_config.o (.rodata.gMCAN0ConfigParams)
+                  00001610    00000020     driverlib.a : dl_mcan.o (.rodata.cst32)
+                  00001630    00000020     ti_msp_dl_config.o (.rodata.gMCAN0BitTimes)
+                  00001650    00000010     ti_msp_dl_config.o (.rodata.gMCAN0StdFiltelem)
+                  00001660    00000004     ti_msp_dl_config.o (.rodata.gMCAN0ClockConf)
+                  00001664    00000004     --HOLE-- [fill = 0]
+
+.init_array 
+*          0    00000000    00000000     UNINITIALIZED
+
+.binit     0    00000000    00000000     
+
+.bss       0    20200000    00000005     UNINITIALIZED
+                  20200000    00000004     (.common:gInterruptLine1Status)
+                  20200004    00000001     (.common:gServiceInt)
+
+.stack     0    20207e00    00000200     UNINITIALIZED
+                  20207e00    00000004     libc.a : boot_cortex_m.c.obj (.stack)
+                  20207e04    000001fc     --HOLE--
+
+__llvm_prf_cnts 
+*          0    20200000    00000000     UNINITIALIZED
+
+__llvm_prf_bits 
+*          0    20200000    00000000     UNINITIALIZED
+
+MODULE SUMMARY
+
+       Module                         code   ro data   rw data
+       ------                         ----   -------   -------
+    .\
+       ti_msp_dl_config.o             508    244       0      
+       mcan_message_rx.o              332    0         5      
+       startup_mspm0g350x_ticlang.o   6      192       0      
+    +--+------------------------------+------+---------+---------+
+       Total:                         846    436       5      
+                                                              
+    C:/ti/mspm0_sdk_2_02_00_05/source/ti/driverlib/lib/ticlang/m0p/mspm0g1x0x_g3x0x/driverlib.a
+       dl_mcan.o                      3932   96        0      
+       dl_sysctl_mspm0g1x0x_g3x0x.o   264    0         0      
+       dl_common.o                    20     0         0      
+    +--+------------------------------+------+---------+---------+
+       Total:                         4216   96        0      
+                                                              
+    D:\ccs\tools\compiler\ti-cgt-armllvm_3.2.2.LTS\lib\armv6m-ti-none-eabi/c/libc.a
+       autoinit.c.obj                 60     0         0      
+       boot_cortex_m.c.obj            40     0         0      
+       copy_zero_init.c.obj           22     0         0      
+       exit.c.obj                     4      0         0      
+       pre_init.c.obj                 4      0         0      
+    +--+------------------------------+------+---------+---------+
+       Total:                         130    0         0      
+                                                              
+       Stack:                         0      0         512    
+       Linker Generated:              0      20        0      
+    +--+------------------------------+------+---------+---------+
+       Grand Total:                   5192   552       517    
+
+
+LINKER GENERATED COPY TABLES
+
+__TI_cinit_table @ 00001674 records: 1, size/record: 8, table size: 8
+	.bss: load addr=00001668, load size=00000008 bytes, run addr=20200000, run size=00000005 bytes, compression=zero_init
+
+
+LINKER GENERATED HANDLER TABLE
+
+__TI_handler_table @ 00001670 records: 1, size/record: 4, table size: 4
+	index: 0, handler: __TI_zero_init
+
+
+GLOBAL SYMBOLS: SORTED ALPHABETICALLY BY Name 
+
+address   name                              
+-------   ----                              
+0000066b  ADC0_IRQHandler                   
+0000066b  ADC1_IRQHandler                   
+0000066b  AES_IRQHandler                    
+00001508  C$$EXIT                           
+0000108d  CANFD0_IRQHandler                 
+0000066b  DAC0_IRQHandler                   
+00001487  DL_Common_delayCycles             
+00000e45  DL_MCAN_addStdMsgIDFilter         
+000011b9  DL_MCAN_clearIntrStatus           
+000008e1  DL_MCAN_config                    
+00000eb9  DL_MCAN_enableIntr                
+00000fe9  DL_MCAN_enableIntrLine            
+00001429  DL_MCAN_getIntrStatus             
+0000140d  DL_MCAN_getOpMode                 
+00000db1  DL_MCAN_getRevisionId             
+00000c35  DL_MCAN_getRxFIFOStatus           
+00000369  DL_MCAN_init                      
+000010cd  DL_MCAN_isMemInitDone             
+000000c1  DL_MCAN_msgRAMConfig              
+000007b1  DL_MCAN_readMsgRam                
+00000f21  DL_MCAN_selectIntrLine            
+0000066d  DL_MCAN_setBitTime                
+00001281  DL_MCAN_setClockConfig            
+00001041  DL_MCAN_setExtIDAndMask           
+0000136d  DL_MCAN_setOpMode                 
+00000cf9  DL_MCAN_writeRxFIFOAck            
+00000f85  DL_SYSCTL_setHFCLKSourceHFXTParams
+0000066b  DMA_IRQHandler                    
+0000066b  Default_Handler                   
+0000066b  GROUP0_IRQHandler                 
+0000066b  GROUP1_IRQHandler                 
+0000066b  HardFault_Handler                 
+0000066b  I2C0_IRQHandler                   
+0000066b  I2C1_IRQHandler                   
+0000066b  NMI_Handler                       
+0000066b  PendSV_Handler                    
+0000066b  RTC_IRQHandler                    
+00001501  Reset_Handler                     
+0000066b  SPI0_IRQHandler                   
+0000066b  SPI1_IRQHandler                   
+0000066b  SVC_Handler                       
+00001149  SYSCFG_DL_GPIO_init               
+00000a0d  SYSCFG_DL_MCAN0_init              
+00001349  SYSCFG_DL_SYSCTL_CLK_init         
+00001181  SYSCFG_DL_SYSCTL_init             
+00001459  SYSCFG_DL_init                    
+000011ed  SYSCFG_DL_initPower               
+0000066b  SysTick_Handler                   
+0000066b  TIMA0_IRQHandler                  
+0000066b  TIMA1_IRQHandler                  
+0000066b  TIMG0_IRQHandler                  
+0000066b  TIMG12_IRQHandler                 
+0000066b  TIMG6_IRQHandler                  
+0000066b  TIMG7_IRQHandler                  
+0000066b  TIMG8_IRQHandler                  
+0000066b  UART0_IRQHandler                  
+0000066b  UART1_IRQHandler                  
+0000066b  UART2_IRQHandler                  
+0000066b  UART3_IRQHandler                  
+20208000  __STACK_END                       
+00000200  __STACK_SIZE                      
+00000000  __TI_ATRegion0_region_sz          
+00000000  __TI_ATRegion0_src_addr           
+00000000  __TI_ATRegion0_trg_addr           
+00000000  __TI_ATRegion1_region_sz          
+00000000  __TI_ATRegion1_src_addr           
+00000000  __TI_ATRegion1_trg_addr           
+00000000  __TI_ATRegion2_region_sz          
+00000000  __TI_ATRegion2_src_addr           
+00000000  __TI_ATRegion2_trg_addr           
+00001674  __TI_CINIT_Base                   
+0000167c  __TI_CINIT_Limit                  
+0000167c  __TI_CINIT_Warm                   
+00001670  __TI_Handler_Table_Base           
+00001674  __TI_Handler_Table_Limit          
+0000110d  __TI_auto_init_nobinit_nopinit    
+ffffffff  __TI_pprof_out_hndl               
+ffffffff  __TI_prof_data_size               
+ffffffff  __TI_prof_data_start              
+00000000  __TI_static_base__                
+00001471  __TI_zero_init_nomemset           
+ffffffff  __binit__                         
+UNDEFED   __mpu_init                        
+20207e00  __stack                           
+20200000  __start___llvm_prf_bits           
+20200000  __start___llvm_prf_cnts           
+20200000  __stop___llvm_prf_bits            
+20200000  __stop___llvm_prf_cnts            
+000012fd  _c_int00_noargs                   
+UNDEFED   _system_post_cinit                
+00001505  _system_pre_init                  
+00001509  abort                             
+ffffffff  binit                             
+20200000  gInterruptLine1Status             
+20200004  gServiceInt                       
+00000000  interruptVectors                  
+00000b29  main                              
+
+
+GLOBAL SYMBOLS: SORTED BY Symbol Address 
+
+address   name                              
+-------   ----                              
+00000000  __TI_ATRegion0_region_sz          
+00000000  __TI_ATRegion0_src_addr           
+00000000  __TI_ATRegion0_trg_addr           
+00000000  __TI_ATRegion1_region_sz          
+00000000  __TI_ATRegion1_src_addr           
+00000000  __TI_ATRegion1_trg_addr           
+00000000  __TI_ATRegion2_region_sz          
+00000000  __TI_ATRegion2_src_addr           
+00000000  __TI_ATRegion2_trg_addr           
+00000000  __TI_static_base__                
+00000000  interruptVectors                  
+000000c1  DL_MCAN_msgRAMConfig              
+00000200  __STACK_SIZE                      
+00000369  DL_MCAN_init                      
+0000066b  ADC0_IRQHandler                   
+0000066b  ADC1_IRQHandler                   
+0000066b  AES_IRQHandler                    
+0000066b  DAC0_IRQHandler                   
+0000066b  DMA_IRQHandler                    
+0000066b  Default_Handler                   
+0000066b  GROUP0_IRQHandler                 
+0000066b  GROUP1_IRQHandler                 
+0000066b  HardFault_Handler                 
+0000066b  I2C0_IRQHandler                   
+0000066b  I2C1_IRQHandler                   
+0000066b  NMI_Handler                       
+0000066b  PendSV_Handler                    
+0000066b  RTC_IRQHandler                    
+0000066b  SPI0_IRQHandler                   
+0000066b  SPI1_IRQHandler                   
+0000066b  SVC_Handler                       
+0000066b  SysTick_Handler                   
+0000066b  TIMA0_IRQHandler                  
+0000066b  TIMA1_IRQHandler                  
+0000066b  TIMG0_IRQHandler                  
+0000066b  TIMG12_IRQHandler                 
+0000066b  TIMG6_IRQHandler                  
+0000066b  TIMG7_IRQHandler                  
+0000066b  TIMG8_IRQHandler                  
+0000066b  UART0_IRQHandler                  
+0000066b  UART1_IRQHandler                  
+0000066b  UART2_IRQHandler                  
+0000066b  UART3_IRQHandler                  
+0000066d  DL_MCAN_setBitTime                
+000007b1  DL_MCAN_readMsgRam                
+000008e1  DL_MCAN_config                    
+00000a0d  SYSCFG_DL_MCAN0_init              
+00000b29  main                              
+00000c35  DL_MCAN_getRxFIFOStatus           
+00000cf9  DL_MCAN_writeRxFIFOAck            
+00000db1  DL_MCAN_getRevisionId             
+00000e45  DL_MCAN_addStdMsgIDFilter         
+00000eb9  DL_MCAN_enableIntr                
+00000f21  DL_MCAN_selectIntrLine            
+00000f85  DL_SYSCTL_setHFCLKSourceHFXTParams
+00000fe9  DL_MCAN_enableIntrLine            
+00001041  DL_MCAN_setExtIDAndMask           
+0000108d  CANFD0_IRQHandler                 
+000010cd  DL_MCAN_isMemInitDone             
+0000110d  __TI_auto_init_nobinit_nopinit    
+00001149  SYSCFG_DL_GPIO_init               
+00001181  SYSCFG_DL_SYSCTL_init             
+000011b9  DL_MCAN_clearIntrStatus           
+000011ed  SYSCFG_DL_initPower               
+00001281  DL_MCAN_setClockConfig            
+000012fd  _c_int00_noargs                   
+00001349  SYSCFG_DL_SYSCTL_CLK_init         
+0000136d  DL_MCAN_setOpMode                 
+0000140d  DL_MCAN_getOpMode                 
+00001429  DL_MCAN_getIntrStatus             
+00001459  SYSCFG_DL_init                    
+00001471  __TI_zero_init_nomemset           
+00001487  DL_Common_delayCycles             
+00001501  Reset_Handler                     
+00001505  _system_pre_init                  
+00001508  C$$EXIT                           
+00001509  abort                             
+00001670  __TI_Handler_Table_Base           
+00001674  __TI_CINIT_Base                   
+00001674  __TI_Handler_Table_Limit          
+0000167c  __TI_CINIT_Limit                  
+0000167c  __TI_CINIT_Warm                   
+20200000  __start___llvm_prf_bits           
+20200000  __start___llvm_prf_cnts           
+20200000  __stop___llvm_prf_bits            
+20200000  __stop___llvm_prf_cnts            
+20200000  gInterruptLine1Status             
+20200004  gServiceInt                       
+20207e00  __stack                           
+20208000  __STACK_END                       
+ffffffff  __TI_pprof_out_hndl               
+ffffffff  __TI_prof_data_size               
+ffffffff  __TI_prof_data_start              
+ffffffff  __binit__                         
+ffffffff  binit                             
+UNDEFED   __mpu_init                        
+UNDEFED   _system_post_cinit                
+
+[97 symbols]

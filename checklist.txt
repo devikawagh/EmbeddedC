@@ -1,0 +1,16 @@
+Things to do:
+Button debouncing (button pressed led should be turned on) DONE
+2 buttons,  leds DONE
+Police lighting hardware & software delay DONE
+Diwali Lighting hardware & software delay DONE
+UART echo(4 bytes only) DONE
+UART RXTX using interrupt DONE
+UART send without interrupt
+UART receive without interrupt
+UART hello15(loopback) DONE
+timer-pwmDONE-oneshoutdown&upcountingDONE-compare&capture
+adc DONE
+dac DONE
+spi
+i2c
+can
