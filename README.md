@@ -1,4 +1,4 @@
-This repository contains EmbeddedC codes for various peripherals and protocols, specifically designed for the TI MSP0G2507 Microcontroller. It includes implementations for: 
+This repository contains EmbeddedC codes for various peripherals and protocols, specifically designed for the TI MSP0G3507 Microcontroller. It includes implementations for: 
 1. UART
 2. SPI
 3. I2C
